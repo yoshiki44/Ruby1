@@ -8,7 +8,7 @@ memo_type = gets.to_i # ユーザーの入力値を取得し、数字へ変換�
 # 「memo_type」の値（1 or 2）によって処理を分岐させていきましょう。
 if memo_type == 1
     puts "拡張子を除いたファイル名を入力してください"
-    file_name = gets.to_s # ファイル名をターミナルから入力する
+    file_name = gets.chomp # ファイル名をターミナルから入力する
     puts "メモしたい内容を記載してください"
     puts "入力が完了したら”Ctrl＋D”を押してください"
     input = $stdin.readlines # メモ内容をターミナルから入力する
@@ -19,7 +19,7 @@ if memo_type == 1
     
 elsif memo_type == 2
     puts "拡張子を除いたファイル名を入力してください"
-    file_name2 = gets.to_s # 追加するメモのファイル名を入力する
+    file_name2 = gets.chomp # 追加するメモのファイル名を入力する
     puts "追加したい内容を記載してください"
     puts "入力が完了したら”Ctrl＋D”を押してください"
     add_input = $stdin.readlines # メモに追加する内容を入力する
